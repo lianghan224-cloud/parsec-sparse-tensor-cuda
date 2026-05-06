@@ -132,12 +132,3 @@ Current repository status:
 - Paper summary notes have been added.
 - Runnable experiment scripts are being cleaned and will be added later.
 
-## 10. TODO
-
-- [ ] Clean and upload runnable experiment scripts.
-- [ ] Add dataset preprocessing instructions.
-- [ ] Add runtime and RMSE plotting scripts.
-- [ ] Add CUDA implementation notes.
-- [ ] Add reproducibility commands.
-- [ ] Add more detailed performance analysis.
-- [ ] Connect the system design idea to segmented LLM KV Cache compression.

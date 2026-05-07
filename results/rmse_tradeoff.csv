@@ -1,0 +1,9 @@
+dataset,sampling_rate,method,final_rmse
+BJTaxi,0.5,Only divide,0.038928
+BJTaxi,0.5,PARSEC,0.042199
+PeMS,0.5,Only divide,0.289256
+PeMS,0.5,PARSEC,0.298212
+ECW08,0.5,Only divide,0.071722
+ECW08,0.5,PARSEC,0.098948
+CBW,0.5,Only divide,0.018276
+CBW,0.5,PARSEC,0.023788

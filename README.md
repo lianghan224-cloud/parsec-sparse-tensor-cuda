@@ -75,6 +75,22 @@ The speedup is calculated as:
 
 This result shows that PARSEC can reduce redundant updates and improve training efficiency, while still maintaining a controllable reconstruction error.
 
+### 5.1 Runtime Ablation on BJTaxi
+
+The following figure compares the cumulative GPU runtime between the `Only divide` baseline and `PARSEC` on BJTaxi under sampling rate 0.5.
+
+![BJTaxi Runtime Ablation](results/ablation_bjtaxi_runtime.png)
+
+PARSEC reduces the cumulative GPU runtime from about **12.15 s** to **8.57 s**, achieving approximately **1.42× speedup**.
+
+### 5.2 RMSE Trade-off
+
+The following figure compares the final RMSE of `Only divide` and `PARSEC` across four datasets.
+
+![RMSE Trade-off](results/rmse_tradeoff.png)
+
+The dynamic reactivation mechanism reduces redundant computation, but introduces a moderate increase in RMSE. This shows a typical efficiency-accuracy trade-off, which is important in AI infrastructure systems where runtime, memory, and accuracy often need to be balanced.
+
 ## 6. Efficiency-Accuracy Trade-off
 
 The dynamic reactivation mechanism improves runtime efficiency by freezing blocks with low update benefits.
@@ -132,12 +148,3 @@ Current repository status:
 - Paper summary notes have been added.
 - Runnable experiment scripts are being cleaned and will be added later.
 
-## 10. TODO
-
-- [ ] Clean and upload runnable experiment scripts.
-- [ ] Add dataset preprocessing instructions.
-- [ ] Add runtime and RMSE plotting scripts.
-- [ ] Add CUDA implementation notes.
-- [ ] Add reproducibility commands.
-- [ ] Add more detailed performance analysis.
-- [ ] Connect the system design idea to segmented LLM KV Cache compression.
